@@ -8,11 +8,11 @@ if [ -f arch/arm/boot/zImage ]
 then
 
 echo "generating device tree..."
-./dtbTool -o ../final_files/dt.img -s 2048 -p ./scripts/dtc/ ./arch/arm/boot/
+./dtbTool -o /data/android/final_files/dt.img -s 2048 -p ./scripts/dtc/ ./arch/arm/boot/
 
 ### copy zImage
-cp arch/arm/boot/zImage ../final_files/.
-cp drivers/char/adsprpc.ko ../final_files/.
+cp arch/arm/boot/zImage /data/android/final_files/.
+#cp drivers/char/adsprpc.ko ../final_files/.
 #cp arch/arm/mach-msm/qdsp6v2/adsp-loader.ko ../final_files/.
 #cp net/wireless/cfg80211.ko ../final_files/.
 #~/arm-cortex_a15-linux-gnueabihf-linaro_4.9.1-2014.04/bin/arm-gnueabi-strip --strip-unneeded ../final_files/adsprpc.ko
